@@ -1,0 +1,24 @@
+#server:
+#  port: 8084
+#  servlet:
+#    context-path: /ms-instructor
+#    
+#  error:
+#    include-details: always
+    
+    
+    
+spring:    
+  application:
+    name: ms-gestion-instructor  
+  config:
+    import: optional:configserver:http://localhost:8888 
+    
+    
+# Oracle settings
+#spring:
+#  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:orcl
+#    username: MS012021
+#    password: 12345
+#    driver-class-name: oracle.jdbc.driver.OracleDriver

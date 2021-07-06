@@ -1,0 +1,16 @@
+
+server:
+  port: 8085
+  servlet:
+    context-path: /ms-alumno
+    
+  error:
+    include-details: always
+    
+# MySQL:
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ms01_2021_alumno?serverTimezone=GMT-6
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver

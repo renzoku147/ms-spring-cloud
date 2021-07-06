@@ -1,0 +1,27 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: ms-admin-config-server
+    
+#Configuracion Local
+#  profiles:
+#    active: native
+#    
+#  cloud:
+#    config:
+#      server: 
+#        native:
+#          searchLocations: file:///C:/Users/ESPINOZA/Documents/workspace spring/Spring microservicios Galaxy/ms-gestion-config-data
+
+#Configuracion Cloud (git)
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/renzoku147/ms-spring-cloud.git
+          searchPaths: ms-gestion-config-data
+          username: ${USER_NAME}
+          password: ${USER_PASSWORD}
+          cloneOnStart: true
