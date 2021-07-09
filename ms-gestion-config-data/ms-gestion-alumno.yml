@@ -16,20 +16,20 @@
 #    driver-class-name: oracle.jdbc.driver.OracleDriver
 
 server:
-  port: 8084
+  port: 8082
   servlet:
-    context-path: /ms-instructor
+    context-path: /ms-alumno
     
   error:
     include-details: always
     
-# Oracle settings
+# MySQL:
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:orcl
-    username: MS012021
-    password: 12345
-    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:mysql://localhost:3306/ms01_2021_alumno?serverTimezone=GMT-6
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
     
 # Registry Client (Instructor)
 eureka:

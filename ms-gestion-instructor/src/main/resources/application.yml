@@ -1,3 +1,15 @@
+spring:
+  application:
+    name: ms-gestion-instructor
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+      retry:
+         max-attempts: 20
+         max-interval: 15000
+         initial-interval: 10000
+
 #server:
 #  port: 8084
 #  servlet:
@@ -7,16 +19,17 @@
 #    include-details: always
     
     
-    
-spring:    
-  application:
-    name: ms-gestion-instructor  
-  config:
-    import: optional:configserver:http://localhost:8888 
+#spring:    
+#  application:
+#    name: ms-gestion-instructor  
+#  config:
+#    import: optional:configserver:http://localhost:8888
+
+
     
     
 # Oracle settings
-#spring:
+#spring: 
 #  datasource:
 #    url: jdbc:oracle:thin:@localhost:1521:orcl
 #    username: MS012021
